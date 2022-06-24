@@ -27,9 +27,10 @@ public class Util {
                         .setProperty("hibernate.connection.url", url)
                         .setProperty("hibernate.connection.username", user)
                         .setProperty("hibernate.connection.password", password)
-                        .setProperty("dialect", "org.hibernate.dialect.MySQLDialect")
-                        .setProperty("show_sql", "true")
-                        .setProperty("hbm2ddl.auto", "create")
+                        .setProperty("hibernation.dialect", "org.hibernate.dialect.MySQLDialect")
+                        .setProperty("hibernate.show_sql", "true")
+                        .setProperty("hibernate.format_sql", "true")
+                        .setProperty("hibernate.hbm2ddl.auto", "create")
                         .addAnnotatedClass(User.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
